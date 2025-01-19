@@ -1,13 +1,133 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+<!--     <meta charset="UTF-8"> -->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!--  -->
+<!-- 	<title>Supplier</title> -->
+<!--     <link rel="icon" type="image/svg" sizes="32x32" href="icon.svg"> -->
+<!--  -->
+<!--     <link rel="stylesheet" href="styles.css"> -->
+<!-- </head> -->
+<!-- <body> -->
+<!-- 	<header> -->
+<!-- 		<a href="./index.html" class="title"><center><i>Supplier</i></center></a> -->
+<!-- 	</header> -->
+<!--  -->
+<!--     <div class="link-container"> -->
+<!-- 		<br> -->
+<!--         <a href="./items.html" class="button">Browse items</a> -->
+<!--         <a href="./borrowing.html" class="button">Borrow items</a> -->
+<!--         <a href="#" class="button">Donate items</a> -->
+<!--         <a href="#" class="button">Trade items</a> -->
+<!--         <a href="#" class="button">Return items</a> -->
+<!--     </div> -->
+<!--  -->
+<!--     <script src="Item.js"></script> -->
+<!--     <script src="script.js"></script> -->
+<!-- </body> -->
+<!-- </html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up & Log In</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Search with Suggestions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        #search-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        #search-bar {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #suggestions {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .suggestion-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
-    <script src="Item.js"></script>
-    <script src="script.js"></script>
+
+    <h1>Search with Suggestions</h1>
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Start typing...">
+        <div id="suggestions"></div>
+    </div>
+
+    <script>
+        // Sample array for search
+        const dataArray = ["Apple", "Banana", "Orange", "Grapes", "Pineapple", "Strawberry", "Watermelon"];
+
+        const searchBar = document.getElementById('search-bar');
+        const suggestionsBox = document.getElementById('suggestions');
+
+        // Event listener for typing in the search bar
+        searchBar.addEventListener('input', function() {
+            const query = searchBar.value.toLowerCase();
+            const filteredSuggestions = dataArray.filter(item => item.toLowerCase().includes(query));
+
+            // Clear previous suggestions
+            suggestionsBox.innerHTML = '';
+
+            if (query) {
+                filteredSuggestions.forEach(item => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.classList.add('suggestion-item');
+                    suggestionItem.textContent = item;
+
+                    // Add click event to each suggestion
+                    suggestionItem.addEventListener('click', function() {
+                        searchBar.value = item;
+                        suggestionsBox.innerHTML = ''; // Clear suggestions
+                        suggestionsBox.style.display = 'none'; // Hide suggestions
+                    });
+
+                    suggestionsBox.appendChild(suggestionItem);
+                });
+
+                suggestionsBox.style.display = 'block'; // Show suggestions
+            } else {
+                suggestionsBox.style.display = 'none'; // Hide suggestions when input is empty
+            }
+        });
+
+        // Hide suggestions when clicking outside the search bar
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('#search-container')) {
+                suggestionsBox.style.display = 'none';
+            }
+        });
+    </script>
+
 </body>
 </html>
