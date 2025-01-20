@@ -10,6 +10,8 @@ const container = document.getElementById('container');
 items.forEach(obj => {
 	const item = document.createElement('div');
 
+
+	//assalamualaikum abrar
 	// aritra beautify this shit.
 	// also put in a link to the borrowpage for each item
 	item.innerHTML = `<strong>Item ID:</strong> ${obj.id} 
