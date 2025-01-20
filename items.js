@@ -9,6 +9,7 @@ const container = document.getElementById('container');
 
 items.forEach(obj => {
 	const item = document.createElement('div');
+	item.classList.add('item');
 
 
 	//assalamualaikum abrar
