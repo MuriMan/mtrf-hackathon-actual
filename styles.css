@@ -28,6 +28,7 @@ body, html {
     background-image: linear-gradient(to left, rgb(172, 155, 155), rgb(216, 198, 198));
     color: #ebdbb2;
     font-family: 'Latin Modern Roman';
+    margin: 0;
 }
 
 .mjx-container, .katex {
@@ -69,6 +70,25 @@ div, p {
 .box {
     flex: 1;
     text-align: justify;
+}
+
+.search-bar {
+    padding: 10px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.search {
+    width: 400px;
+    height: 30px;
+    border: 5px solid #000;
+    border-radius: 20px;
+}
+
+.search::placeholder {
+    font-style: italic;
+    text-align: center;
+    font-size: medium;
 }
 
 header {
@@ -156,10 +176,11 @@ h1 { text-align: center;
     display: flex;
     height: auto;
     box-sizing: border-box;
-    width: 100%;
-    flex-wrap: wrap;
     justify-content: center;
     padding: 20px 0px;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -177,6 +198,33 @@ h1 { text-align: center;
     border: 5px solid #000000;
     background-color: #898f91;
     border-radius: 20px;
+    display: inline-block;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.item-amount {
+    font-size: 20px;
+    color: #000000;
+}
+
+.borrow-button {
+    background-color: #bdcfd4;
+    border-radius: 20px;
+    border: 3px solid black;
+    text-align: center;
+    height: auto;
+    display: block;
+}
+
+.borrow-button:hover {
+    background-color: #7c8c91;
 }
 
 .byline {
