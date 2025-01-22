@@ -7,13 +7,14 @@ items.forEach(obj => {
 	// display description here as well aritra
 	item.innerHTML = `<strong class = "item-name">${obj.name}</strong>
 		<br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} 
-		<br></br> <button onclick="borrow(${obj.id})" class = "borrow-button">Borrow</button>`;
+		<br></br> <a href=./confirm_borrow.html>borrow</a>`;
+	// make the hyperlinks BUTTONS.
 
 	container.appendChild(item);
 });
 
 function showItems() {
-	container.innerHTML = "";
+	container.textContent = "";
 
 	items.forEach(obj => {
 		const item = document.createElement("div");
@@ -21,10 +22,11 @@ function showItems() {
 
 		// display description here as well aritra
 		item.innerHTML = `<strong class = "item-name">${obj.name}</strong> <br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} 
-			<br></br> <button onclick="borrow(${obj.id})" class = "borrow-button">Borrow</button>`;
+			<br></br> <a href="./confirm_borrow.html" class = "borrow-button">Borrow</a>`;
 
 		container.appendChild(item);
 	});
+
 }
 
 // needs significant work, will work.
@@ -32,21 +34,19 @@ function filterArray() {
 	const query = document.getElementById("searchItems").value.toLowerCase();
 	const results = items.filter(item => item.name.toLowerCase().includes(query));
 
-	console.log("hi");
-
 	displayResults(results);
 }
 
 function displayResults(results) {
 	const resultsList = document.getElementById("container");
 
+	item.innerHTML = ""
 	results.forEach(obj => {
 		const item = document.createElement("div");
 		item.classList.add("item");
 
 		item.innerHTML = `<strong class = "item-name">${obj.name}</strong>
-			<br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} 
-			<br></br> <button onclick="borrow(${obj.id})" class = "borrow-button">Borrow</button>`;
+			<br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} <br></br> <a href="./confirm_borrow.html" class = "borrow-button">Borrow</a>`;
 
 		resultsList.appendChild(item);
 	});
@@ -58,16 +58,13 @@ function displayResults(results) {
 	}
 }
 
-// TODO: borrow leads to a form which requires student enter their student id.
-
-function borrow(id) {
+function borrow(studentID, itemID) {
 	// id must equal array position
-	if (id < items.length) {
-		if (items[id].amount > 0) {
-			items[id].borrowers++; // its an array oopsies.
-			items[id].amount--;
+	if (itemID < items.length) {
+		if (items[itemID].amount > 0) {
+			items[itemID].borrowers.push(studentID); // its an array oopsies.
 		}
-
-		showItems();
 	}
+
+	showItems();
 }
