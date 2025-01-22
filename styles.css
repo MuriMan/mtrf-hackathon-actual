@@ -222,7 +222,7 @@ h1 { text-align: center;
     border: 3px solid black;
     text-align: center;
     height: auto;
-    display: block;
+    display: inline-block;
 }
 
 .borrow-button:hover {
