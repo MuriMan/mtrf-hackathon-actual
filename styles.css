@@ -61,12 +61,6 @@ div, p {
     font-style: normal;
 }
 
-/* .container { */
-/*     display: flex; */
-/*     /* gap: 10px; */ */
-/*     grid-auto-flow: column; */
-/* } */
-
 .box {
     flex: 1;
     text-align: justify;
@@ -99,7 +93,6 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
     padding-bottom: 30px;
-    /* margin: 10px; */
     color: #34839b;
     font-family: 'Lora', serif;
     text-align: center;
@@ -229,6 +222,286 @@ h1 { text-align: center;
     background-color: #7c8c91;
 }
 
+.donation-container {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 5px #000000;
+    width: min-content;
+    border-radius: 20px;
+    background-color: #898f91;
+}
+
+.itemNameD {
+    align-content: center;
+    width: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color:#000000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemDescD {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemAmtD {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttonD {
+    background-color: #bdcfd4;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: solid 3px #000000;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.msgD {
+    padding-top: 40px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.tradeFormA {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: block;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 5px #000000;
+    width: min-content;
+    border-radius: 20px;
+    background-color: #898f91;
+    padding: 20px
+}
+
+.tradeFormB {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: block;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 5px #000000;
+    width: min-content;
+    border-radius: 20px;
+    background-color: #898f91;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.itemNameTA {
+    align-content: center;
+    width: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color:#000000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemDescTA {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemAmtTA {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemNameTB {
+    align-content: center;
+    width: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color:#000000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemDescTB {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemAmtTB {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttonTA {
+    background-color: #bdcfd4;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: solid 3px #000000;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.buttonTB {
+    background-color: #bdcfd4;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: solid 3px #000000;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.returnForm {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: block;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 5px #000000;
+    width: min-content;
+    border-radius: 20px;
+    background-color: #898f91;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.itemNameR {
+    align-content: center;
+    width: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color:#000000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemDescR {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.itemAmtR {
+    align-content: center;
+    width: max-content;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: #000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttonR {
+    background-color: #bdcfd4;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    border: solid 3px #000000;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.buttonR:hover {
+    background-color: #74868b;
+}
+
+.buttonTA:hover {
+    background-color: #74868b;
+}
+
+.buttonTB:hover {
+    background-color: #74868b;
+}
+
+.buttonD:hover {
+    background-color: #74868b;
+}
+
 .byline {
 	font-size: 24px;
 	margin-top: 10px;
@@ -237,40 +510,3 @@ h1 { text-align: center;
 .byline-date {
 	font-style: normal;
 }
-
-/*  */
-/* .link-container { */
-/* 	text-align: center; */
-/* } */
-/*  */
-/* .link-container { */
-/* 	text-align: center; */
-/* } */
-/*  */
-/* .button { */
-/* 	display: block; */
-/* 	margin: 10px 0; */
-/* 	color: #007bff; */
-/* 	text-decoration: none; */
-/* 	font-size: 18px; */
-/* 	position: relative; */
-/* } */
-/*  */
-/* .button::after { */
-/* 	content: ''; */
-/* 	position: absolute; */
-/* 	left: 0; */
-/* 	bottom: 0; */
-/* 	width: 0; */
-/* 	height: 2px; */
-/* 	background: #007bff; */
-/* 	transition: width 0.3s ease; */
-/* } */
-/*  */
-/* .button:hover::after { */
-/* 	width: 100%; */
-/* } */
-/*  */
-/* .button:hover { */
-/* 	color: #0056b3; */
-/* } */

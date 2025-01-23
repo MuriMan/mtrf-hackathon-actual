@@ -34,12 +34,13 @@ function filterArray() {
 	const results = items.filter(item => item.name.toLowerCase().includes(query));
 
 	displayResults(results);
+	console.log(results)
 }
 
 function displayResults(results) {
 	const resultsList = document.getElementById("container");
 
-	item.innerHTML = ""
+	resultsList.innerHTML = ""
 	results.forEach(obj => {
 		const item = document.createElement("div");
 		item.classList.add("item");

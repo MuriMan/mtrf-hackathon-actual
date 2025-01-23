@@ -25,15 +25,24 @@
 
 		<!-- beautify this aritra -->
 		<form id="donateForm" onsubmit="handleReturnSubmit(event)">
-			<label for="itemName">Item name:</label>
-			<input type="text" id="itemName" required>
+			<div class = "returnForm">
+				<div class = "itemNameR">
+					<label for="itemName">Item name:</label>
+					<input type="text" id="itemName" required>
+				</div>
 			
-			<label for="description">Description: </label>
-			<input type="text" id="itemDesc">
-			<label for="itemAmt">Amount: </label>
-			<input type="number" id="itemAmt">
+				<div class = "itemDescR">
+					<label for="description">Description: </label>
+					<input type="text" id="itemDesc">
+				</div>
+				
+				<div class = "itemAmtR">
+					<label for="itemAmt">Amount: </label>
+					<input type="number" id="itemAmt">
+				</div>
 
-			<button type="submit">Submit</button>
+				<button class = "buttonR" type="submit">Submit</button>
+			</div>
 		</form>
 		<!--- add a warning that says "the item you donate may already exist, we suggest
 			looking at the items that are already present, and use the name used in other
