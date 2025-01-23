@@ -7,8 +7,7 @@ items.forEach(obj => {
 	// display description here as well aritra
 	item.innerHTML = `<strong class = "item-name">${obj.name}</strong>
 		<br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} 
-		<br></br> <a href=./confirm_borrow.html>borrow</a>`;
-	// make the hyperlinks BUTTONS.
+		<br></br>  <button onclick="studentBorrow(event, ${obj.id})" class = "borrow-button">Borrow</button>`;
 
 	container.appendChild(item);
 });
@@ -22,7 +21,7 @@ function showItems() {
 
 		// display description here as well aritra
 		item.innerHTML = `<strong class = "item-name">${obj.name}</strong> <br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} 
-			<br></br> <a href="./confirm_borrow.html" class = "borrow-button">Borrow</a>`;
+			<br></br><button onclick="studentBorrow(event, ${obj.id})">borrow</button>`;
 
 		container.appendChild(item);
 	});
@@ -46,7 +45,7 @@ function displayResults(results) {
 		item.classList.add("item");
 
 		item.innerHTML = `<strong class = "item-name">${obj.name}</strong>
-			<br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} <br></br> <a href="./confirm_borrow.html" class = "borrow-button">Borrow</a>`;
+			<br> <strong class = "item-amount">Amount Available:</strong> ${(obj.amount - obj.borrowers.length)} <br></br> <button onclick="studentBorrow(event, ${obj.id})">borrow</button>`;
 
 		resultsList.appendChild(item);
 	});
@@ -66,5 +65,5 @@ function borrow(studentID, itemID) {
 		}
 	}
 
-	showItems();
+	location.reload();
 }

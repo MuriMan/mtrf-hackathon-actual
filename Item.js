@@ -13,10 +13,12 @@ class Item {
 // ITEM ID = ARRAY POSITION OF ITEM.
 // see items.js for usage explanation
 // -------------------------
-const items = [
+var items = [
 	new Item(0, "Scissors", 2, []),
 	new Item(1, "Scissors", 3, []),
 	new Item(2, "Scissors", 4, []),
 	new Item(3, "Glue", 5, []),
 	new Item(4, "Glue", 6, []),
 ];
+
+var itemsLen = 4;
