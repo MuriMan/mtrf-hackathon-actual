@@ -65,6 +65,4 @@ function borrow(studentID, itemID) {
 			items[itemID].borrowers.push(studentID); // its an array oopsies.
 		}
 	}
-
-	location.reload();
 }

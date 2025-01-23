@@ -19,6 +19,9 @@ var items = [
 	new Item(2, "Colour pens", 4, []),
 	new Item(3, "Fineliner", 5, []),
 	new Item(4, "Clipboard", 6, []),
+	new Item(4, "Sharpener", 6, []),
+	new Item(4, "Mechanical pencil", 6, []),
+	new Item(4, "Notebooks", 6, []),
 ];
 
 var itemsLen = 4;
