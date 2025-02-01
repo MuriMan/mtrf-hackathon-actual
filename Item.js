@@ -14,7 +14,7 @@ class Item {
 // see items.js for usage explanation
 // -------------------------
 var items = [
-    new Item(0, "Professional Watercolor Set", 10, []),
+    new Item(0, "Watercolor Set", 10, []),
     new Item(1, "Acrylic Paint Set", 9, []),
     new Item(2, "Oil Paint Set", 10, []),
     new Item(3, "Soft Pastels", 8, []),
@@ -23,7 +23,7 @@ var items = [
     new Item(6, "Charcoal Drawing Set", 7, []),
     new Item(7, "Fineliner Pen Set", 8, []),
     new Item(8, "Ink and Dip Pen Set", 9, []),
-    new Item(9, "Professional Sketchbook", 8, []),
+    new Item(9, "Sketchbook", 8, []),
     new Item(10, "Mixed Media Paper", 7, []),
     new Item(11, "Canvas Panels", 9, []),
     new Item(12, "Watercolor Brushes", 9, []),
@@ -37,6 +37,7 @@ var items = [
     new Item(20, "Lightbox for Tracing", 9, []),
     new Item(21, "Digital Drawing Tablet", 10, []),
     new Item(22, "Color Mixing Palette", 7, [])
+    new Item(23, "Projector", 2, [])
 ];
 
 var itemsLen = 4;

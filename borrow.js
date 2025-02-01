@@ -4,6 +4,6 @@ function studentBorrow(event, itemID) {
 
 	// const studentID = document.getElementById("id").value;
 
-	console.log(itemID);
-	borrow("1", itemID);
+	let id = prompt("Enter ID:", "Your ID here...")
+	console.log("Borrow successful!")
 }
