@@ -36,8 +36,18 @@ var items = [
     new Item(19, "Masking Tape for Artists", 6, []),
     new Item(20, "Lightbox for Tracing", 9, []),
     new Item(21, "Digital Drawing Tablet", 10, []),
-    new Item(22, "Color Mixing Palette", 7, [])
-    new Item(23, "Projector", 2, [])
+    new Item(22, "Color Mixing Palette", 7, []),
+    new Item(23, "Projector", 2, []), 
 ];
 
-var itemsLen = 4;
+// var items = [
+// 	new Item(0, "Scissors", 2, []),
+// 	new Item(1, "Ruler", 3, []),
+// 	new Item(2, "Colour pens", 4, []),
+// 	new Item(3, "Fineliner", 5, []),
+// 	new Item(4, "Clipboard", 6, []),
+// 	new Item(5, "Sharpener", 6, []),
+// 	new Item(6, "Mechanical pencil", 6, []),
+// 	new Item(7, "Notebooks", 6, []), ]; 
+
+console.log(items);
